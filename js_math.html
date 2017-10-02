@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function zero_negativity(arr){
+        var no_neg = true;
+        for (var i = 0; i < arr.length; i++){
+            if (arr[i] < 0){
+                no_neg = false;
+            }
+        }
+        return no_neg;
+    }
+    is_neg = zero_negativity([1,2,3,4,-5])
+    console.log(is_neg);
+
+    function is_even(num){
+        var even = true;
+        if (num % 2 !== 0){
+            even = false;
+        }
+        return even;
+    }
+    x = is_even(3);
+    console.log(x);
+
+    function how_many_even(arr){
+        var count = 0;
+        for (var i = 0; i < arr.length; i++){
+            if (is_even(arr[i])){
+                count += 1;
+            }
+        }
+        return count;
+    }
+    var y = how_many_even([1,2,3,4,5,6]);
+    console.log(y);
+
+    function create_dummy_array(num){
+        let arr = []
+        for (i = 1; i < num; i++){
+            let x = Math.floor(Math.random() * 10);
+            arr.push(x);
+        }
+        return arr;
+    }
+    var z = create_dummy_array(5);
+    console.log(z);
+
+    function random_choice(arr){
+        var b = Math.floor(Math.random() * arr.length);
+        return arr[b];
+    }
+    var q = random_choice([1,2,3,4,5,6]);
+    console.log(q);
+    
+    </script>
+    
+</body>
+</html>
